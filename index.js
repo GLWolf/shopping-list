@@ -2,9 +2,7 @@ function main() {
     function createShoppingList() {
       $('#js-shopping-list-form').on('submit', function(e) {
         e.preventDefault()
-        console.log('button click')
         const userItem = $('#shopping-list-entry').val()
-        console.log(userItem)
         $('.shopping-list').append(`
           <li>
             <span class="shopping-item">${userItem}</span>
@@ -24,7 +22,6 @@ function main() {
     function checkItem() {
       $('.shopping-list').on('click','.shopping-item-toggle', function(e) {
         $(this).closest('li').children('.shopping-item').toggleClass('shopping-item__checked');
-        console.log('check button click')
       })
     }
 
